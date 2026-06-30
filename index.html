@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Максимально правильные ответы — тест</title>
+  <title>Ответы к тесту — 3 варианта</title>
   <style>
-    :root{--bg:#0f172a;--card:#111827;--muted:#94a3b8;--text:#e5e7eb;--line:#243045;--green:#22c55e;--greenBg:#0f2d1c;--yellow:#f59e0b;--blue:#38bdf8;--red:#ef4444}
+    :root{--bg:#0f172a;--card:#111827;--muted:#94a3b8;--text:#e5e7eb;--line:#243045;--green:#22c55e;--greenBg:#0f2d1c;--yellow:#f59e0b;--blue:#38bdf8;--red:#ef4444;--violet:#a78bfa}
     *{box-sizing:border-box}
     body{margin:0;background:linear-gradient(180deg,#0b1020,#111827 45%,#0b1020);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
     header{position:sticky;top:0;z-index:2;background:rgba(15,23,42,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .wrap{max-width:1120px;margin:0 auto;padding:20px}
+    .wrap{max-width:1160px;margin:0 auto;padding:20px}
     h1{font-size:26px;margin:0 0 6px}
     .sub{color:var(--muted);font-size:14px}
-    .controls{display:grid;grid-template-columns:1fr 190px 170px 150px;gap:10px;margin-top:14px}
+    .controls{display:grid;grid-template-columns:1fr 190px 170px 160px;gap:10px;margin-top:14px}
     input,select,button{border:1px solid var(--line);border-radius:12px;background:#0b1220;color:var(--text);padding:11px 12px;font-size:14px}
     button{cursor:pointer} button:hover{border-color:#475569}
     .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     .pill{border:1px solid var(--line);background:#0b1220;border-radius:999px;padding:7px 10px;font-size:13px;color:var(--muted)}
     .pill b{color:var(--text)}
-    main{max-width:1120px;margin:0 auto;padding:18px 20px 60px}
+    main{max-width:1160px;margin:0 auto;padding:18px 20px 60px}
     .key{background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.28);border-radius:18px;padding:16px;margin-bottom:16px}
     .key h2{font-size:18px;margin:0 0 10px}
-    .key-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+    .key-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
     .key-item{background:#0b1220;border:1px solid var(--line);border-radius:10px;padding:8px;font-size:13px}
     .key-item span{color:var(--blue);font-weight:700}
-    .key-item.var{border-color:rgba(245,158,11,.45)}
+    .key-item.var{border-color:rgba(245,158,11,.55)}
     .mini{display:block;color:#fbbf24;font-size:11px;margin-top:3px}
     .question{background:rgba(17,24,39,.9);border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0;box-shadow:0 10px 30px rgba(0,0,0,.18)}
     .q-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px}
@@ -33,27 +33,28 @@
     .opts{display:grid;gap:8px}
     .opt{display:flex;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#0b1220}
     .opt.correct{border-color:rgba(34,197,94,.55);background:linear-gradient(90deg,var(--greenBg),#0b1220)}
-    .letter{width:25px;min-width:25px;height:25px;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#cbd5e1}
+    .letter{width:25px;min-width:25px;height:25px;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#cbd5e1;text-transform:uppercase}
     .correct .letter{border-color:var(--green);color:#052e16;background:var(--green)}
     .check{color:var(--green);font-weight:800;margin-left:auto;white-space:nowrap}
     .note{margin-top:10px;color:#fbbf24;background:rgba(245,158,11,.09);border:1px solid rgba(245,158,11,.27);border-radius:12px;padding:10px;font-size:13px}
-    .variants{margin-top:10px;border:1px solid rgba(56,189,248,.25);background:rgba(56,189,248,.07);border-radius:12px;padding:10px;font-size:13px}
-    .variants-title{color:#bae6fd;font-weight:700;margin-bottom:6px}
-    .variant-row{display:flex;justify-content:space-between;gap:12px;border-top:1px solid rgba(148,163,184,.18);padding:7px 0}
+    .variants{margin-top:12px;border:1px solid rgba(167,139,250,.33);background:rgba(167,139,250,.08);border-radius:12px;padding:10px;font-size:13px}
+    .variants-title{color:#ddd6fe;font-weight:800;margin-bottom:6px}
+    .variant-row{display:grid;grid-template-columns:190px minmax(90px,140px) 1fr;gap:12px;border-top:1px solid rgba(148,163,184,.18);padding:8px 0;align-items:start}
     .variant-row:first-of-type{border-top:0}
-    .variant-name{color:#cbd5e1}
-    .variant-ans{color:#e5e7eb;font-weight:800;white-space:nowrap}
+    .variant-name{color:#cbd5e1;font-weight:650}
+    .variant-ans{color:#e5e7eb;font-weight:900;white-space:nowrap}
+    .variant-comment{color:#94a3b8}
     .hidden{display:none!important}
     footer{color:var(--muted);font-size:13px;text-align:center;padding:30px}
     .empty{color:var(--muted);text-align:center;margin:30px 0}
-    @media(max-width:800px){.controls{grid-template-columns:1fr}.q-head{display:block}.tag{display:inline-block;margin-top:8px}.variant-row{display:block}.variant-ans{display:block;margin-top:3px}}
+    @media(max-width:820px){.controls{grid-template-columns:1fr}.q-head{display:block}.tag{display:inline-block;margin-top:8px}.variant-row{display:block}.variant-ans,.variant-comment{display:block;margin-top:3px}}
     @media print{body{background:#fff;color:#000}header,.controls,.stats,.key,footer{display:none}.question{break-inside:avoid;border:1px solid #ccc;background:white;box-shadow:none}.opt{border:1px solid #ddd;background:white}.opt.correct{border:2px solid #22c55e;background:#f0fff4}.note,.variants{background:#fff8db;color:#000}}
   </style>
 </head>
 <body>
 <header><div class="wrap">
-  <h1>Максимально правильные ответы</h1>
-  <div class="sub">Итоговая версия по источникам. В спорных местах добавлены варианты: ответ текущего сайта/старого ключа, вариант из Otvety(2).docx и более строгий вариант по источникам.</div>
+  <h1>Ответы к тесту — 3 варианта</h1>
+  <div class="sub">В спорных местах показаны три строки: ответ с сайта, ответ из документа Otvety(2).docx и итоговый правильный вариант. Галочками в вариантах вопросов отмечен именно правильный итоговый вариант.</div>
   <div class="controls">
     <input id="search" placeholder="Поиск по вопросам..." />
     <select id="tag"><option value="all">Все темы</option></select>
@@ -64,13 +65,14 @@
 </div></header>
 <main>
   <section class="key">
-    <h2>Ключ ответов</h2>
+    <h2>Итоговый правильный ключ</h2>
     <div class="key-grid" id="keyGrid"></div>
   </section>
   <div id="list"></div>
 </main>
 <footer>Статический HTML-файл. Можно загрузить на GitHub Pages.</footer>
-<scr[
+<script>
+const QUESTIONS = [
   {
     "n": 1,
     "q": "Модель разграничения доступа на основе идентификационных данных использует списки управления доступом, которые содержат:",
@@ -155,17 +157,24 @@
       "d"
     ],
     "tag": "Модели доступа",
-    "note": "Capability-билет содержит идентификатор/ссылку на ресурс и права доступа. Пункт a оставлен как разрешённые операции над ресурсом, d — как привилегии/права доступа; строго минимальный смысл: b+d. В Otvety(2).docx выбран вариант a+b; в итоговом ключе добавлен d как привилегии/права доступа.",
+    "note": "Capability-билет содержит идентификатор ресурса и права доступа. Пункт a оставлен как операции над ресурсом, пункт d — как привилегии/права доступа.",
     "variants": [
       {
-        "name": "Вариант сайта / Otvety(2).docx",
+        "name": "Сайт",
         "answers": [
           "a",
           "b"
         ]
       },
       {
-        "name": "Вариант по источникам / полный",
+        "name": "Документ Otvety(2).docx",
+        "answers": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "name": "Правильный / полный",
         "answers": [
           "a",
           "b",
@@ -233,20 +242,27 @@
     "tag": "BIOS / UEFI",
     "variants": [
       {
-        "name": "Вариант Otvety(2).docx",
+        "name": "Сайт",
+        "answers": [
+          "b",
+          "c"
+        ]
+      },
+      {
+        "name": "Документ Otvety(2).docx",
         "answers": [
           "b"
         ]
       },
       {
-        "name": "Вариант сайта / расширенный",
+        "name": "Правильный",
         "answers": [
           "b",
           "c"
         ]
       }
     ],
-    "note": "Расхождение с Otvety(2).docx: в файле выбран только b, на сайте добавлен c."
+    "note": "Для распознавания нарушенной BIOS логичны оба действия: сравнение с эталонной BIOS и проверка таблицы переходов POST."
   },
   {
     "n": 11,
@@ -259,7 +275,6 @@
       "e": "До предела заполненный кодом чип BIOS платы расширения PCI."
     },
     "correct": [
-      "a",
       "b",
       "c",
       "d",
@@ -268,7 +283,17 @@
     "tag": "BIOS / UEFI",
     "variants": [
       {
-        "name": "Вариант Otvety(2).docx",
+        "name": "Сайт",
+        "answers": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      },
+      {
+        "name": "Документ Otvety(2).docx",
         "answers": [
           "b",
           "c",
@@ -277,9 +302,8 @@
         ]
       },
       {
-        "name": "Вариант сайта / расширенный",
+        "name": "Правильный",
         "answers": [
-          "a",
           "b",
           "c",
           "d",
@@ -287,7 +311,7 @@
         ]
       }
     ],
-    "note": "Расхождение с Otvety(2).docx: в файле нет пункта a, на сайте отмечены все варианты."
+    "note": "Пункт a относится к обнаружению руткита в ОС как драйвера режима ядра, а вопрос именно про инфицированную BIOS платы расширения."
   },
   {
     "n": 12,
@@ -363,14 +387,22 @@
     "tag": "Linux",
     "variants": [
       {
-        "name": "Вариант Otvety(2).docx",
+        "name": "Сайт",
+        "answers": [
+          "b",
+          "c",
+          "e"
+        ]
+      },
+      {
+        "name": "Документ Otvety(2).docx",
         "answers": [
           "b",
           "c"
         ]
       },
       {
-        "name": "Вариант сайта / широкий I/O",
+        "name": "Правильный",
         "answers": [
           "b",
           "c",
@@ -378,7 +410,7 @@
         ]
       }
     ],
-    "note": "Расхождение с Otvety(2).docx: в файле выбрано b+c, на сайте добавлены сетевые операции e."
+    "note": "Компонент ввода-вывода ядра включает работу с устройствами, внешним I/O и сетевыми операциями."
   },
   {
     "n": 16,
@@ -455,10 +487,10 @@
       "c"
     ],
     "tag": "Linux",
-    "note": "Интерфейс системных вызовов — вход из user mode в kernel mode и приём/диспетчеризация syscall. Операции с файловыми абстракциями выполняет VFS/файловая подсистема, поэтому d не выбран.",
+    "note": "Интерфейс системных вызовов — вход из пользовательского режима в ядро и приём syscall. Операции с файловыми абстракциями выполняет VFS/файловая подсистема, поэтому d не выбран.",
     "variants": [
       {
-        "name": "Вариант сайта / старого ключа",
+        "name": "Сайт",
         "answers": [
           "a",
           "c",
@@ -466,7 +498,14 @@
         ]
       },
       {
-        "name": "Вариант по источникам / строгий",
+        "name": "Документ Otvety(2).docx",
+        "answers": [
+          "a",
+          "c"
+        ]
+      },
+      {
+        "name": "Правильный",
         "answers": [
           "a",
           "c"
@@ -648,16 +687,23 @@
       "d"
     ],
     "tag": "Модели доступа",
-    "note": "Исправлено относительно сайта: там d помечен как «тоже верно», поэтому в итоговой версии выбран a+d. В Otvety(2).docx выбран только a; по смыслу дискреционной модели также подходит d.",
+    "note": "DAC даёт владельцу/субъекту возможность делегировать права и определять операции других субъектов над ресурсом.",
     "variants": [
       {
-        "name": "Вариант сайта / Otvety(2).docx",
+        "name": "Сайт",
+        "answers": [
+          "a"
+        ],
+        "comment": "На сайте d подписан как «тоже верно», но галочкой не отмечен."
+      },
+      {
+        "name": "Документ Otvety(2).docx",
         "answers": [
           "a"
         ]
       },
       {
-        "name": "Вариант по смыслу DAC",
+        "name": "Правильный",
         "answers": [
           "a",
           "d"
@@ -694,16 +740,23 @@
       "d"
     ],
     "tag": "BIOS / UEFI",
-    "note": "Оставлено по варианту сайта: b+d. Вопрос спорный, потому что в исходном файле ответ отличался. Расхождение с Otvety(2).docx: в файле выбран a, на сайте — b+d. Вопрос оставлен спорным.",
+    "note": "Вопрос спорный: в документе выбран a, но по смыслу BIOS-rootkit связан с модификацией содержимого ROM BIOS/отображённой области BIOS. Для сдачи по сайту — b+d.",
     "variants": [
       {
-        "name": "Вариант Otvety(2).docx",
+        "name": "Сайт",
+        "answers": [
+          "b",
+          "d"
+        ]
+      },
+      {
+        "name": "Документ Otvety(2).docx",
         "answers": [
           "a"
         ]
       },
       {
-        "name": "Вариант сайта / старого ключа",
+        "name": "Правильный / наиболее вероятный",
         "answers": [
           "b",
           "d"
@@ -744,18 +797,10 @@
       "e"
     ],
     "tag": "BIOS / UEFI",
-    "note": "По спецификации UEFI в архитектуру входят boot services, runtime services, EFI System Partition/UEFI OS loader и другие firmware/protocol interfaces. TPM не выбран: это отдельный доверенный модуль платформы, а не обязательная часть архитектуры UEFI. Расхождение с Otvety(2).docx: в файле a+b+c; сайт добавляет TPM d; по спецификации UEFI логичнее e вместо TPM.",
+    "note": "UEFI включает boot services, runtime services, EFI System Partition/UEFI loader и другие интерфейсы firmware. TPM — отдельный модуль платформы, а не обязательная часть архитектуры UEFI.",
     "variants": [
       {
-        "name": "Вариант Otvety(2).docx",
-        "answers": [
-          "a",
-          "b",
-          "c"
-        ]
-      },
-      {
-        "name": "Вариант сайта / старого ключа",
+        "name": "Сайт",
         "answers": [
           "a",
           "b",
@@ -764,7 +809,15 @@
         ]
       },
       {
-        "name": "Вариант по спецификации UEFI",
+        "name": "Документ Otvety(2).docx",
+        "answers": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      {
+        "name": "Правильный по UEFI",
         "answers": [
           "a",
           "b",
@@ -802,21 +855,23 @@
       "b"
     ],
     "tag": "Linux",
-    "note": "Этого вопроса нет на сайте, он добавлен из файла. Логика: верхний уровень — VFS, нижний уровень — драйвер устройства. Этого вопроса нет на сайте, но он есть в обоих файлах Otvety; ответ b.",
+    "note": "Верхний уровень I/O — VFS, нижний уровень — драйвер устройства. Вопрос есть в документе, но отсутствует на текущем сайте.",
     "variants": [
       {
-        "name": "Вариант сайта",
+        "name": "Сайт",
         "text": "вопрос отсутствует"
       },
       {
-        "name": "Вариант из Otvety(1/2).docx",
+        "name": "Документ Otvety(2).docx",
         "answers": [
           "b"
         ]
-      }
-    ]
-  }
-]  ]
+      },
+      {
+        "name": "Правильный",
+        "answers": [
+          "b"
+        ]
       }
     ]
   }
@@ -828,14 +883,13 @@ const tagSel = $('#tag');
 const search = $('#search');
 const mode = $('#mode');
 const stats = $('#stats');
-
 function lettersFrom(arr){return (arr||[]).map(x=>String(x).toUpperCase()).join(' + ')}
 function letters(q){return lettersFrom(q.correct)}
 function variantText(v){return v.text || lettersFrom(v.answers)}
 function init(){
   const tags=[...new Set(QUESTIONS.map(q=>q.tag))];
   for(const t of tags){const o=document.createElement('option');o.value=t;o.textContent=t;tagSel.appendChild(o)}
-  keyGrid.innerHTML = QUESTIONS.map(q=>`<div class="key-item ${q.variants?'var':''}"><span>${q.n}</span>: ${letters(q)}${q.variants?'<small class="mini">есть варианты</small>':''}</div>`).join('');
+  keyGrid.innerHTML = QUESTIONS.map(q=>`<div class="key-item ${q.variants?'var':''}"><span>${q.n}</span>: ${letters(q)}${q.variants?'<small class="mini">3 варианта</small>':''}</div>`).join('');
   render();
 }
 function render(){
@@ -843,14 +897,14 @@ function render(){
   const tag = tagSel.value;
   const m = mode.value;
   const filtered = QUESTIONS.filter(q=>{
-    const vars = q.variants ? q.variants.map(v=>v.name+' '+variantText(v)).join(' ') : '';
+    const vars = q.variants ? q.variants.map(v=>v.name+' '+variantText(v)+' '+(v.comment||'')).join(' ') : '';
     const hay = (q.q+' '+Object.values(q.opts).join(' ')+' '+(q.note||'')+' '+vars).toLowerCase();
     if(qtext && !hay.includes(qtext)) return false;
     if(tag !== 'all' && q.tag !== tag) return false;
     if(m === 'notes' && !(q.note || q.variants)) return false;
     return true;
   });
-  stats.innerHTML = `<div class="pill"><b>${QUESTIONS.length}</b> вопросов</div><div class="pill"><b>${filtered.length}</b> показано</div><div class="pill"><b>${QUESTIONS.filter(q=>q.note || q.variants).length}</b> спорных/с примечаниями</div><div class="pill"><b>${QUESTIONS.filter(q=>q.variants).length}</b> с вариантами</div>`;
+  stats.innerHTML = `<div class="pill"><b>${QUESTIONS.length}</b> вопросов</div><div class="pill"><b>${filtered.length}</b> показано</div><div class="pill"><b>${QUESTIONS.filter(q=>q.note || q.variants).length}</b> спорных/с примечаниями</div><div class="pill"><b>${QUESTIONS.filter(q=>q.variants).length}</b> с 3 вариантами</div>`;
   if(!filtered.length){list.innerHTML='<div class="empty">Ничего не найдено.</div>';return;}
   list.innerHTML = filtered.map(q=>card(q)).join('');
 }
@@ -859,7 +913,7 @@ function card(q){
     const ok = q.correct.includes(k);
     return `<div class="opt ${ok?'correct':''}"><div class="letter">${k}</div><div>${escapeHtml(v)}</div>${ok?'<div class="check">✓</div>':''}</div>`;
   }).join('');
-  const variants = q.variants ? `<div class="variants"><div class="variants-title">Варианты ответа</div>${q.variants.map(v=>`<div class="variant-row"><div class="variant-name">${escapeHtml(v.name)}</div><div class="variant-ans">${escapeHtml(variantText(v))}</div></div>`).join('')}</div>` : '';
+  const variants = q.variants ? `<div class="variants"><div class="variants-title">3 варианта ответа</div>${q.variants.map(v=>`<div class="variant-row"><div class="variant-name">${escapeHtml(v.name)}</div><div class="variant-ans">${escapeHtml(variantText(v))}</div><div class="variant-comment">${escapeHtml(v.comment||'')}</div></div>`).join('')}</div>` : '';
   return `<article class="question" id="q${q.n}">
     <div class="q-head"><div class="q-title">${q.n}. ${escapeHtml(q.q)}</div><div class="tag">${q.tag}</div></div>
     <div class="opts">${opts}</div>
@@ -867,14 +921,15 @@ function card(q){
     ${q.note ? `<div class="note">⚠ ${escapeHtml(q.note)}</div>` : ''}
   </article>`;
 }
-function escapeHtml(s){return String(s).replace(/[&<>\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[m]))}
+function escapeHtml(s){return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
 search.addEventListener('input',render);tagSel.addEventListener('change',render);mode.addEventListener('change',render);
 $('#copy').addEventListener('click', async()=>{
   const txt = QUESTIONS.map(q=>{
     const main = `${q.n}: ${letters(q)}`;
     const vars = q.variants ? ' | варианты: ' + q.variants.map(v=>`${v.name} — ${variantText(v)}`).join('; ') : '';
     return main + vars;
-  }).join('\n');
+  }).join('
+');
   try{await navigator.clipboard.writeText(txt); $('#copy').textContent='Скопировано'; setTimeout(()=>$('#copy').textContent='Скопировать ключ',1200)}catch(e){alert(txt)}
 });
 init();
