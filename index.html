@@ -53,7 +53,7 @@
 <body>
 <header><div class="wrap">
   <h1>Максимально правильные ответы</h1>
-  <div class="sub">Итоговая версия по источникам. В спорных местах добавлены два варианта: ответ текущего сайта/старого ключа и более строгий вариант по источникам.</div>
+  <div class="sub">Итоговая версия по источникам. В спорных местах добавлены варианты: ответ текущего сайта/старого ключа, вариант из Otvety(2).docx и более строгий вариант по источникам.</div>
   <div class="controls">
     <input id="search" placeholder="Поиск по вопросам..." />
     <select id="tag"><option value="all">Все темы</option></select>
@@ -70,8 +70,7 @@
   <div id="list"></div>
 </main>
 <footer>Статический HTML-файл. Можно загрузить на GitHub Pages.</footer>
-<script>
-const QUESTIONS = [
+<scr[
   {
     "n": 1,
     "q": "Модель разграничения доступа на основе идентификационных данных использует списки управления доступом, которые содержат:",
@@ -156,10 +155,10 @@ const QUESTIONS = [
       "d"
     ],
     "tag": "Модели доступа",
-    "note": "Capability-билет содержит идентификатор/ссылку на ресурс и права доступа. Пункт a оставлен как разрешённые операции над ресурсом, d — как привилегии/права доступа; строго минимальный смысл: b+d.",
+    "note": "Capability-билет содержит идентификатор/ссылку на ресурс и права доступа. Пункт a оставлен как разрешённые операции над ресурсом, d — как привилегии/права доступа; строго минимальный смысл: b+d. В Otvety(2).docx выбран вариант a+b; в итоговом ключе добавлен d как привилегии/права доступа.",
     "variants": [
       {
-        "name": "Вариант сайта / старого ключа",
+        "name": "Вариант сайта / Otvety(2).docx",
         "answers": [
           "a",
           "b"
@@ -231,7 +230,23 @@ const QUESTIONS = [
       "b",
       "c"
     ],
-    "tag": "BIOS / UEFI"
+    "tag": "BIOS / UEFI",
+    "variants": [
+      {
+        "name": "Вариант Otvety(2).docx",
+        "answers": [
+          "b"
+        ]
+      },
+      {
+        "name": "Вариант сайта / расширенный",
+        "answers": [
+          "b",
+          "c"
+        ]
+      }
+    ],
+    "note": "Расхождение с Otvety(2).docx: в файле выбран только b, на сайте добавлен c."
   },
   {
     "n": 11,
@@ -250,7 +265,29 @@ const QUESTIONS = [
       "d",
       "e"
     ],
-    "tag": "BIOS / UEFI"
+    "tag": "BIOS / UEFI",
+    "variants": [
+      {
+        "name": "Вариант Otvety(2).docx",
+        "answers": [
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      },
+      {
+        "name": "Вариант сайта / расширенный",
+        "answers": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      }
+    ],
+    "note": "Расхождение с Otvety(2).docx: в файле нет пункта a, на сайте отмечены все варианты."
   },
   {
     "n": 12,
@@ -323,7 +360,25 @@ const QUESTIONS = [
       "c",
       "e"
     ],
-    "tag": "Linux"
+    "tag": "Linux",
+    "variants": [
+      {
+        "name": "Вариант Otvety(2).docx",
+        "answers": [
+          "b",
+          "c"
+        ]
+      },
+      {
+        "name": "Вариант сайта / широкий I/O",
+        "answers": [
+          "b",
+          "c",
+          "e"
+        ]
+      }
+    ],
+    "note": "Расхождение с Otvety(2).docx: в файле выбрано b+c, на сайте добавлены сетевые операции e."
   },
   {
     "n": 16,
@@ -593,10 +648,10 @@ const QUESTIONS = [
       "d"
     ],
     "tag": "Модели доступа",
-    "note": "Исправлено относительно сайта: там d помечен как «тоже верно», поэтому в итоговой версии выбран a+d.",
+    "note": "Исправлено относительно сайта: там d помечен как «тоже верно», поэтому в итоговой версии выбран a+d. В Otvety(2).docx выбран только a; по смыслу дискреционной модели также подходит d.",
     "variants": [
       {
-        "name": "Вариант сайта",
+        "name": "Вариант сайта / Otvety(2).docx",
         "answers": [
           "a"
         ]
@@ -639,7 +694,22 @@ const QUESTIONS = [
       "d"
     ],
     "tag": "BIOS / UEFI",
-    "note": "Оставлено по варианту сайта: b+d. Вопрос спорный, потому что в исходном файле ответ отличался."
+    "note": "Оставлено по варианту сайта: b+d. Вопрос спорный, потому что в исходном файле ответ отличался. Расхождение с Otvety(2).docx: в файле выбран a, на сайте — b+d. Вопрос оставлен спорным.",
+    "variants": [
+      {
+        "name": "Вариант Otvety(2).docx",
+        "answers": [
+          "a"
+        ]
+      },
+      {
+        "name": "Вариант сайта / старого ключа",
+        "answers": [
+          "b",
+          "d"
+        ]
+      }
+    ]
   },
   {
     "n": 35,
@@ -674,8 +744,16 @@ const QUESTIONS = [
       "e"
     ],
     "tag": "BIOS / UEFI",
-    "note": "По спецификации UEFI в архитектуру входят boot services, runtime services, EFI System Partition/UEFI OS loader и другие firmware/protocol interfaces. TPM не выбран: это отдельный доверенный модуль платформы, а не обязательная часть архитектуры UEFI.",
+    "note": "По спецификации UEFI в архитектуру входят boot services, runtime services, EFI System Partition/UEFI OS loader и другие firmware/protocol interfaces. TPM не выбран: это отдельный доверенный модуль платформы, а не обязательная часть архитектуры UEFI. Расхождение с Otvety(2).docx: в файле a+b+c; сайт добавляет TPM d; по спецификации UEFI логичнее e вместо TPM.",
     "variants": [
+      {
+        "name": "Вариант Otvety(2).docx",
+        "answers": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
       {
         "name": "Вариант сайта / старого ключа",
         "answers": [
@@ -724,17 +802,21 @@ const QUESTIONS = [
       "b"
     ],
     "tag": "Linux",
-    "note": "Этого вопроса нет на сайте, он добавлен из файла. Логика: верхний уровень — VFS, нижний уровень — драйвер устройства.",
+    "note": "Этого вопроса нет на сайте, он добавлен из файла. Логика: верхний уровень — VFS, нижний уровень — драйвер устройства. Этого вопроса нет на сайте, но он есть в обоих файлах Otvety; ответ b.",
     "variants": [
       {
         "name": "Вариант сайта",
         "text": "вопрос отсутствует"
       },
       {
-        "name": "Вариант из файла / итоговый",
+        "name": "Вариант из Otvety(1/2).docx",
         "answers": [
           "b"
         ]
+      }
+    ]
+  }
+]  ]
       }
     ]
   }
@@ -753,7 +835,7 @@ function variantText(v){return v.text || lettersFrom(v.answers)}
 function init(){
   const tags=[...new Set(QUESTIONS.map(q=>q.tag))];
   for(const t of tags){const o=document.createElement('option');o.value=t;o.textContent=t;tagSel.appendChild(o)}
-  keyGrid.innerHTML = QUESTIONS.map(q=>`<div class="key-item ${q.variants?'var':''}"><span>${q.n}</span>: ${letters(q)}${q.variants?'<small class="mini">есть 2 варианта</small>':''}</div>`).join('');
+  keyGrid.innerHTML = QUESTIONS.map(q=>`<div class="key-item ${q.variants?'var':''}"><span>${q.n}</span>: ${letters(q)}${q.variants?'<small class="mini">есть варианты</small>':''}</div>`).join('');
   render();
 }
 function render(){
@@ -768,7 +850,7 @@ function render(){
     if(m === 'notes' && !(q.note || q.variants)) return false;
     return true;
   });
-  stats.innerHTML = `<div class="pill"><b>${QUESTIONS.length}</b> вопросов</div><div class="pill"><b>${filtered.length}</b> показано</div><div class="pill"><b>${QUESTIONS.filter(q=>q.note || q.variants).length}</b> спорных/с примечаниями</div><div class="pill"><b>${QUESTIONS.filter(q=>q.variants).length}</b> с двумя вариантами</div>`;
+  stats.innerHTML = `<div class="pill"><b>${QUESTIONS.length}</b> вопросов</div><div class="pill"><b>${filtered.length}</b> показано</div><div class="pill"><b>${QUESTIONS.filter(q=>q.note || q.variants).length}</b> спорных/с примечаниями</div><div class="pill"><b>${QUESTIONS.filter(q=>q.variants).length}</b> с вариантами</div>`;
   if(!filtered.length){list.innerHTML='<div class="empty">Ничего не найдено.</div>';return;}
   list.innerHTML = filtered.map(q=>card(q)).join('');
 }
@@ -777,7 +859,7 @@ function card(q){
     const ok = q.correct.includes(k);
     return `<div class="opt ${ok?'correct':''}"><div class="letter">${k}</div><div>${escapeHtml(v)}</div>${ok?'<div class="check">✓</div>':''}</div>`;
   }).join('');
-  const variants = q.variants ? `<div class="variants"><div class="variants-title">Два варианта ответа</div>${q.variants.map(v=>`<div class="variant-row"><div class="variant-name">${escapeHtml(v.name)}</div><div class="variant-ans">${escapeHtml(variantText(v))}</div></div>`).join('')}</div>` : '';
+  const variants = q.variants ? `<div class="variants"><div class="variants-title">Варианты ответа</div>${q.variants.map(v=>`<div class="variant-row"><div class="variant-name">${escapeHtml(v.name)}</div><div class="variant-ans">${escapeHtml(variantText(v))}</div></div>`).join('')}</div>` : '';
   return `<article class="question" id="q${q.n}">
     <div class="q-head"><div class="q-title">${q.n}. ${escapeHtml(q.q)}</div><div class="tag">${q.tag}</div></div>
     <div class="opts">${opts}</div>
